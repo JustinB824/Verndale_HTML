@@ -1,0 +1,276 @@
+@import "variables.scss"; // Include all variables for the site like fonts
+@import "mixins.scss"; // Include the CSS mixins
+@import "reset.scss"; // Include the general HTML reset
+
+main {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+
+    @include xlarge {
+        display: block;
+        width: 1020px;
+        margin: 0 auto;
+    }
+    
+    .box {
+        padding: 20px 0;
+
+        @include small {
+            @include clearfix;
+            padding: 5px;
+        }
+
+        .trio {
+
+            @include small {
+                float: left;
+                width: 33.3%;
+                padding: 10px;
+            }
+
+            .borders {
+                position: relative;
+                border: 10px solid $lightblue;
+                padding: 10px;
+
+                @include small {
+                    min-height: 465px;
+                }
+                @include xlarge {
+                    min-height: 475px;
+                }
+
+                h2 {
+                    margin-bottom: 10px;
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+
+                    @include small {
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+                    @include xlarge {
+                        width: 95%;
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+                }
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    margin-bottom: 10px;
+                    font-size: 16px;
+                    line-height: 30px;
+
+                    @include small {
+                        font-size: 14px;
+                        line-height: 28px;
+                    }
+                    @include xlarge {
+                        font-size: 16px;
+                        line-height: 30px;
+                    }
+                }
+
+                a {
+                    color: #ffffff;
+                    border-bottom: 1px solid #ffffff;
+
+                    &:hover {
+                        border-bottom: none;
+                    }
+                }
+
+                ul {
+                    margin-top: 10px;
+                    
+                    li {
+                        font-size: 16px;
+                        line-height: 16px;
+                        padding: 0 0 20px; 
+
+                        @include small {
+                            font-size: 14px;
+                            line-height: 14px;
+                        }
+                        @include small {
+                            font-size: 16px;
+                            line-height: 16px;
+                        }
+                    }
+                }
+
+                .cta {
+                    display: block;
+                    margin-top: 5px;
+                    padding: 10px 30px;
+                    background-color: #ffffff;
+                    color: $darkblue;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 14px;
+                    font-weight: bold;
+                    border-bottom: none;
+
+                    @include small {
+                        position: absolute;
+                        bottom: 10px;
+                        right: 10px;
+                        width: calc(100% - 20px);
+                        font-size: 12px;
+                        line-height: 12px;
+                    }
+                    @include xlarge {
+                        width: auto;
+                        font-size: 14px;
+                        line-height: 14px;
+                    }
+                }
+
+                &.leadership {
+                    background-color: $darkblue;
+                    color: #ffffff;
+
+                    p {
+                        width: 93%;
+                    }
+
+                    .cta {
+                        margin-top: 0;
+                    }
+                }
+
+                &.donate {
+                    background-color: $darkblue;
+                    color: #ffffff;
+                }
+
+                &.theatre {
+                    border-color: $lightyellow;
+                    background-color: $darkyellow;
+                    color: #000000;
+
+                    a {
+                        color: #000000;
+                        border-bottom-color: #000000;
+                    }
+
+                    .cta {
+                        color: #000000;
+                    }
+                }
+            }
+        }
+    }
+
+    .sponsors {
+        padding: 10px;
+        text-align: center;
+
+        @include small {
+            padding: 20px;
+            text-align: left;
+        }
+
+        h4 {
+            font-size: 12px;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: darkblue;
+
+            span {
+                border-bottom: 1px solid gray;
+            }
+
+            br {
+                @include small {
+                    display: none;
+                }
+            }
+        }
+
+        ul {
+            padding: 50px 0;
+
+            @include small {
+                padding: 20px 0;
+            }
+
+            li {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 -4px 30px 0;
+                width: 50%;
+
+                &:first-child {
+                    @include small {
+                        text-align: left;
+                        padding-left: 0;
+                    }
+                }
+                &:last-child {
+                    @include small {
+                        text-align: right;
+                        padding-right: 0;
+                    }
+                }
+
+                @include small {
+                    width: auto;
+                    margin-bottom: 0;
+                    padding: 0 2.5%;
+                    text-align: center;
+                }
+                @include xlarge {
+                    padding: 0 5%;
+                }
+
+                img {
+                    width: auto;
+
+                    &.citi {
+                        height: 30px;
+                        @include small { height: 38px; }
+                    }
+                    &.msg {
+                        height: 30px;
+                        @include small { height: 40px; }
+                    }
+                    &.polar {
+                        height: 60px;
+                        @include small { height: 50px; }
+                   }
+                    &.vern {
+                        height: 20px;
+                        @include small { height: 25px; }
+                    }
+                    &.sevenup {
+                        height: 50px;
+                        @include small { height: 45px; }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+@import "sizes.scss"; // Your media queries should be listed after all main styles.
+
+* {
+    @include box-sizing(border-box); // This removes padding from adding to the full width of an object
+}
